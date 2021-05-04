@@ -1,8 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* :root {
+  --main-color: #fe4775;
+  --secondary-color: #161060;
+  --main-text-color: #000000;
+  --secondary-text-color: #fefdfd;
+  --placeholder-color: #393939;
+
+  --main-font-family: "Montserrat", sans-serif;
+  --secondary-font-family: "Roboto", sans-serif;
+} */
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0;
+}
+
+.header {
+  background-color: cadetblue;
+  color: #2c3e50;
+  height: 20vh;
+}
+
+.main {
+  background-color: #2c3e50;
+  color: cadetblue;
+  height: 70vh;
+}
+
+.footer {
+  background-color: cadetblue;
+  color: #2c3e50;
+  height: 10vh;
 }
