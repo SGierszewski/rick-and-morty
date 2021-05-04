@@ -6,7 +6,7 @@ const headerElement = createElement("header", {
   children: [
     createElement("h1", {
       className: "title",
-      innerText: "The ultimate Rick and Morty Search App",
+      innerText: "The Ultimate Rick and Morty Search App",
     }),
     createElement("nav", {
       innerText: "Navigation",
@@ -28,7 +28,7 @@ const mainElement = createElement("main", {
 const footerElement = createElement("footer", {
   className: "footer",
   children: [
-    createElement("h3", {
+    createElement("p", {
       innerText: "insert footer text here",
     }),
   ],
