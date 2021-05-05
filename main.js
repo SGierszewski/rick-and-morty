@@ -1,5 +1,37 @@
 import "./style.css";
 import { createElement } from "./utils/elements";
+import { createCharacterElement } from "./components/character";
+
+const characters = [
+  {
+    imgSrc: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    name: "Rick Sanchez",
+    status: "Alive",
+    species: "Human",
+    origin: { name: "Earth" },
+  },
+  {
+    imgSrc: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    name: "Rick Sanchez",
+    status: "Alive",
+    species: "Human",
+    origin: { name: "Earth" },
+  },
+  {
+    imgSrc: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    name: "Rick Sanchez",
+    status: "Alive",
+    species: "Human",
+    origin: { name: "Earth" },
+  },
+  {
+    imgSrc: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    name: "Rick Sanchez",
+    status: "Alive",
+    species: "Human",
+    origin: { name: "Earth" },
+  },
+];
 
 const headerElement = createElement("header", {
   className: "header",
@@ -21,7 +53,10 @@ const mainElement = createElement("main", {
       innerText: "Find your favorite Rick and Morty character",
     }),
     createElement("input", { placeholder: "Enter character name" }),
-    createElement("section", { innerText: "Results" }),
+    createElement("section", {
+      innerText: "Results",
+      children: characters.map(createCharacterElement),
+    }),
   ],
 });
 
