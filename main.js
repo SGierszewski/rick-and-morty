@@ -41,7 +41,7 @@ const mainElement = createElement("main", {
           const characterElements = characters.map(createCharacterElement);
           characterSection.append(...characterElements);
         });
-      }, 300),
+      }, 300), // duration of 300ms is good practice
     }),
     characterSection,
   ],

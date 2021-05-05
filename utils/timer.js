@@ -5,6 +5,6 @@ export function debounce(func, duration) {
     // set timeout when function should be executed
     timeoutID = setTimeout(() => {
       func(...args);
-    }, duration); // duration until 300ms is good practice
+    }, duration);
   };
 }
