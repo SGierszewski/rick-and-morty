@@ -37,7 +37,6 @@ const mainElement = createElement("main", {
 
         const search = event.target.value; //event.target = self-reference to input field; value = TEXT input
         getCharacters(search).then((characters) => {
-          //character section is build according to search input
           const characterElements = characters.map(createCharacterElement);
           characterSection.append(...characterElements);
         });
