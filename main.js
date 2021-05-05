@@ -2,11 +2,7 @@ import "./style.css";
 import { createElement, removeAllChildren } from "./utils/elements";
 import { createCharacterElement } from "./components/character";
 import { getCharacters } from "./utils/api";
-
-// getCharacters().then((characters) => {
-//   const characterElements = characters.map(createCharacterElement);
-//   characterSection.append(...characterElements);
-// });
+import { debounce } from "./utils/timer";
 
 const characterSection = createElement("section", {
   className: "results",
@@ -35,7 +31,7 @@ const mainElement = createElement("main", {
       className: "input",
       placeholder: "Search character",
       autofocus: true, //input field is focused after each page reload
-      oninput: (event) => {
+      oninput: debounce((event) => {
         // oninput = input event for every keystroke
         removeAllChildren(characterSection); //remove children afetr each input to hinder the search results from stacking
 
@@ -45,7 +41,7 @@ const mainElement = createElement("main", {
           const characterElements = characters.map(createCharacterElement);
           characterSection.append(...characterElements);
         });
-      },
+      }, 300),
     }),
     characterSection,
   ],
