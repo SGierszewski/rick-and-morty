@@ -8,3 +8,7 @@ export function createElement(tagName, { children, ...props } = {}) {
   } // children = array
   return element;
 }
+
+export function removeAllChildren(element) {
+  element.innerHTML = " ";
+}
